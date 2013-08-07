@@ -1,7 +1,7 @@
 import pygame
 pygame.init()
 import data
-if __name__ == "__main__":
+def main():
   while True:
     for i in pygame.event.get():
       if i.type == pygame.QUIT:
@@ -13,6 +13,7 @@ if __name__ == "__main__":
           data.currentmenu.submit()
         elif i.key in (pygame.K_LEFT, pygame.K_a):
           data.currentmenu.left()
+
         elif i.key in (pygame.K_RIGHT, pygame.K_d):
           data.currentmenu.right()
         elif i.key in (pygame.K_UP, pygame.K_w):
@@ -23,3 +24,5 @@ if __name__ == "__main__":
           data.currentmenu.text(i.unicode)
     data.currentmenu.run()
     pygame.display.flip()
+if __name__ == "__main__":
+	main()
